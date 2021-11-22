@@ -1,3 +1,5 @@
 build
 .vscode
 service/node_modules
+service/piccap.service/package.json
+service/piccap.service/piccap.js
