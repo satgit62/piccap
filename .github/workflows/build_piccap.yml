@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  TOOLCHAIN_URL:   TOOLCHAIN_URL: https://github.com/openlgtv/buildroot-nc4/releases/download/webos-b17b4cc/arm-webos-linux-gnueabi_sdk-buildroot.tar.gz
+  TOOLCHAIN_URL: TOOLCHAIN_URL: https://github.com/openlgtv/buildroot-nc4/releases/download/webos-b17b4cc/arm-webos-linux-gnueabi_sdk-buildroot.tar.gz
     TOOLCHAIN_SHA256: 1f69af43caac4b6898d8f0323c975be60af04abdd1e1c144773072b28c961c20
   TOOLCHAIN_DIR: /opt/arm-webos-linux-gnueabi_sdk-buildroot
   TOOLCHAIN_FILE: /opt/arm-webos-linux-gnueabi_sdk-buildroot/share/buildroot/toolchainfile.cmake
