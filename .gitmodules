@@ -1,4 +1,0 @@
-[submodule "hyperion-webos"]
-	path = hyperion-webos
-	url = https://github.com/sundermann/hyperion-webos/
-        branch = d7a2e6487d95775d442bc81de2a6f23238b7e7c6
