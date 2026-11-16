@@ -1,3 +1,4 @@
 [submodule "hyperion-webos"]
 	path = hyperion-webos
-	url = https://github.com
+	url = https://github.com/satgit62/hyperion-webos.git
+	branch = feat/histogram-drm-fallback
