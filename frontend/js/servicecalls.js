@@ -232,6 +232,7 @@ function getSettings() {
           document.getElementById('checkSettingsNV12').checked = result.nv12;
           document.getElementById('checkSettingsDrmFallback').checked = result.drmFallback !== false;
           document.getElementById('selectSettingsHistogramProfile').value = result.histogramProfile || 'default';
+          document.getElementById('selectSettingsHistogramGeometry').value = result.histogramGeometry || 'rectangles';
 
           logIt('Loading settings done!');
           document.getElementById('txtInfoState').innerHTML = 'Settings loaded';
@@ -304,6 +305,7 @@ window.serviceResetSettings = () => {
     nv12: false,
     drmFallback: true,
     histogramProfile: 'default',
+    histogramGeometry: 'rectangles',
   };
   logIt(config);
 
@@ -397,6 +399,7 @@ window.serviceSaveSettings = () => {
     nv12: document.getElementById('checkSettingsNV12').checked,
     drmFallback: document.getElementById('checkSettingsDrmFallback').checked,
     histogramProfile: document.getElementById('selectSettingsHistogramProfile').value,
+    histogramGeometry: document.getElementById('selectSettingsHistogramGeometry').value,
 };
 
   logIt(`Config: ${JSON.stringify(config)}`);
