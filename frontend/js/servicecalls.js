@@ -230,6 +230,8 @@ function getSettings() {
           document.getElementById('checkSettingsNoHDR').checked = result.nohdr;
           document.getElementById('checkSettingsNoPowerstate').checked = result.nopowerstate;
           document.getElementById('checkSettingsNV12').checked = result.nv12;
+          document.getElementById('checkSettingsDrmFallback').checked = result.drmFallback !== false;
+          document.getElementById('selectSettingsHistogramProfile').value = result.histogramProfile || 'default';
 
           logIt('Loading settings done!');
           document.getElementById('txtInfoState').innerHTML = 'Settings loaded';
@@ -300,6 +302,8 @@ window.serviceResetSettings = () => {
     vsync: true,
     autostart: false,
     nv12: false,
+    drmFallback: true,
+    histogramProfile: 'default',
   };
   logIt(config);
 
@@ -391,6 +395,8 @@ window.serviceSaveSettings = () => {
     nohdr: document.getElementById('checkSettingsNoHDR').checked,
     nopowerstate: document.getElementById('checkSettingsNoPowerstate').checked,
     nv12: document.getElementById('checkSettingsNV12').checked,
+    drmFallback: document.getElementById('checkSettingsDrmFallback').checked,
+    histogramProfile: document.getElementById('selectSettingsHistogramProfile').value,
 };
 
   logIt(`Config: ${JSON.stringify(config)}`);
