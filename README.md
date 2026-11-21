@@ -5,8 +5,7 @@
 
 ### PicCap?    
 PicCap is an frontend app, which you can install on your TV, to make TV content capturing as easy as possible. It ships and controls the seperated [hyperion-webos](https://github.com/webosbrew/hyperion-webos) background native service, which uses capture interfaces on your TV based on reverse engineering, proccesses the output and sends as result a low quality image to a receiver like Hyperion's flatbuffer server.  
-On newer TVs there is no official way for capturing DRM-protected content like from Netflix or Amazon. This restriction doesn't take place for content comming from an HDMI input.  
-So currently as a workaround you can play your media using your PC, FireTV-Stick or Chromecast and still enjoy your LEDs.
+On newer TVs, standard video capture cannot read DRM-protected content from streaming apps like Netflix, Disney+, or Prime Video. On supported models (webOS 10+ / webOS 23–25+), PicCap now includes an automatic **DRM Histogram Fallback** (`libhistogram`) that seamlessly switches to hardware scaler histogram data during protected playback and returns to normal UI/video capture afterward.
 
 ### Hyperion?  
 [hyperion.ng](https://github.com/hyperion-project/hyperion.ng) basicly is a server service, which transforms incomming image data to an LED output. The idea is to have an ambilight like it's known from Philipps TVs.
@@ -52,7 +51,13 @@ Wait a few secounds to let the service elevate root permissions through Homebrew
 We use different libraries to capture TVs content. These are used by hyperion-webos and described [here](https://github.com/webosbrew/hyperion-webos/tree/main#backends).  
 
 ### Advanced settings
-Some TV models are comptabile with a specific backend, but require a slightly different routine to work reliably. You can find an explaination for  these so called quirks [here](https://github.com/webosbrew/hyperion-webos/tree/main#quirks).
+Some TV models are compatible with a specific backend, but require a slightly different routine to work reliably. You can find an explanation for these so-called quirks [here](https://github.com).
+
+#### DRM Histogram Fallback (webOS 10+)
+On supported LG TVs (e.g., OLED C2 on webOS 25, C3, B4, C4, G4, and QNED models running webOS 10+ / webOS 23–25+), enabling **Automatic DRM histogram fallback** allows PicCap to capture ambient lighting from DRM-protected streaming apps:
+- **Automatic Handover & Return:** Automatically switches from `libvtcapture` to `libhistogram` when protected playback starts, and restores normal UI (`libhalgal`) and video (`libvtcapture`) capture when exiting back to Home or unprotected sources.
+- **TV Histogram Zone Profile:** Choose the zone layout matching your TV (`Default / LG G4`, `LG OLED C2 (webOS 25) / C3 / C4`, `LG OLED B-Series`, or `All-Zone Average`).
+- **Histogram Spatial Geometry:** Choose between `Region Rectangles (4-Sided)` and `Perimeter (Rim)` projection.
 
 ## Development
 ### Dependencies
