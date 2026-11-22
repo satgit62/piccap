@@ -117,8 +117,8 @@ You should also check out the other contributors. Some nice enhancements wouldn'
 Check out [OpenLGs-Discord](https://discord.gg/9sqAgHVRhP) server, if you have some questions. You will find a very helpful community. <3  
 
 ### Screenshots
-![Main](https://user-images.githubusercontent.com/51515147/192116360-efd6483a-8dc7-4b61-af27-d428f90740a3.jpg)  
-![Settings](https://user-images.githubusercontent.com/51515147/192116365-1f9a7590-7a88-4bfd-924f-3b8bf9ae47b6.jpg)  
-![Advanced settings](https://user-images.githubusercontent.com/51515147/192116371-21387541-7c56-4866-b7fd-23246a9a4d2e.jpg)  
-![Logs](https://user-images.githubusercontent.com/51515147/192116386-df4e5e3c-7260-451e-8685-69a69a3abc0b.jpg)  
-![About](https://user-images.githubusercontent.com/51515147/192116388-6dce877d-41be-41b1-922e-630783fbca7c.jpg)  
+![Main](docs/assets/piccap_main.png)
+![Settings](docs/assets/piccap_settings.png)
+![Advanced settings](docs/assets/piccap_settings_adv.png)
+![Logs](docs/assets/piccap_logs.png)
+![About](docs/assets/piccap_about.png)
