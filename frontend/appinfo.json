@@ -1,6 +1,6 @@
 {
   "id": "org.webosbrew.piccap",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "vendor": "Homebrew",
   "type": "web",
   "main": "index.html",
