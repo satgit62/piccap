@@ -58,6 +58,7 @@ On supported LG TVs (e.g., OLED C2 on webOS 25, C3, B4, C4, G4, and QNED models 
 - **Automatic Handover & Return:** Automatically switches from `libvtcapture` to `libhistogram` when protected playback starts, and restores normal UI (`libhalgal`) and video (`libvtcapture`) capture when exiting back to Home or unprotected sources.
 - **TV Histogram Zone Profile:** Choose the zone layout matching your TV (`Default / LG G4`, `LG OLED C2 (webOS 25) / C3 / C4`, `LG OLED B-Series`, or `All-Zone Average`).
 - **Histogram Spatial Geometry:** Choose between `Region Rectangles (4-Sided)` and `Perimeter (Rim)` projection.
+- **One-Click Log Export (`Save to /tmp`):** In the **Logs** tab, click **Setup logging** (once after reboot), reproduce an issue, and press **Save to /tmp** to export TV/webOS device info along with the last 500 `hyperion-webos` log lines to `/tmp/piccap.log`.
 
 ## Development
 ### Dependencies
