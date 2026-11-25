@@ -400,7 +400,7 @@ window.serviceSaveSettings = () => {
     drmFallback: document.getElementById('checkSettingsDrmFallback').checked,
     histogramProfile: document.getElementById('selectSettingsHistogramProfile').value,
     histogramGeometry: document.getElementById('selectSettingsHistogramGeometry').value,
-};
+  };
 
   logIt(`Config: ${JSON.stringify(config)}`);
 
