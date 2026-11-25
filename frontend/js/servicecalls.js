@@ -408,6 +408,35 @@ window.serviceSaveSettings = () => {
   saveSettings(config);
 };
 
+window.saveLogToTmp = () => {
+  logIt('Saving hyperion-webos logs to /tmp/piccap.log...');
+  document.getElementById('txtInfoState').innerHTML = 'Saving log to /tmp/piccap.log...';
+  /* eslint-disable no-undef */
+  webOS.service.request(
+    'luna://org.webosbrew.hbchannel.service',
+    {
+      method: 'exec',
+      parameters: {
+        command: '{ grep -h -E "(hardware_id|core_os_release|product_id|webos_release|board_type)" /var/run/nyx/* 2>/dev/null; echo "---"; grep hyperion-webos /var/log/messages | tail -n500; } > /tmp/piccap.log && chmod 644 /tmp/piccap.log',
+      },
+      onSuccess(result) {
+        onHBExec(result);
+        if (result.returnValue === true) {
+          document.getElementById('txtInfoState').innerHTML = 'Saved to /tmp/piccap.log!';
+          logIt('Successfully saved logs to /tmp/piccap.log');
+        } else {
+          document.getElementById('txtInfoState').innerHTML = 'Failed to save log!';
+        }
+      },
+      onFailure(result) {
+        onHBExec(result);
+        document.getElementById('txtInfoState').innerHTML = 'Failed to save log!';
+      },
+    },
+  );
+  /* eslint-enable no-undef */
+};
+
 window.reloadHyperionLog = () => {
   logIt('Calling HBCHannel to get latest 200 hyperion-webos log lines.');
   /* eslint-disable no-undef */
