@@ -97,7 +97,9 @@ npm run-script package
 
 ## Other
 
-### Known issues  
+### Known issues
+
+**Leave Quirks disabled unless specifically required for your TV model:** Enabling unnecessary quirks in *Advanced settings* (such as `QUIRK_DILE_VT_DUMP_LOCATION_2` on webOS 3.x/4.x `libdile_vt` TVs) can cause bright green LEDs in app menus when no video stream is active, as well as resolution mismatches (`960x540` vs. UI resolution) that trigger repeated LUT reloads and frame drops.  
 **Expect bugs - This app is still in early development**  
 Attention! New AI options have been added to newer LG models.
 Since the 'AI Picture Pro', 'AI Brightness', 'AI Genre Selection', 'AI Image Game Optimizer' and 'AI Game Sound' options use the same recording process as Hyperion WebOS, dropouts may occur during recording. Consequently, a live preview in HyperHDR is temporarily unavailable, and the LEDs also switch off briefly.
