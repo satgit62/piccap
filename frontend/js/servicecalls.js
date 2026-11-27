@@ -195,6 +195,9 @@ function getSettings() {
 
           // Process Height/Width for easier selection
           switch (result.width * result.height) {
+            case 82944:
+              document.getElementById('selectSettingsResolution').value = '384x216';
+              break;
             case 57600:
               document.getElementById('selectSettingsResolution').value = '320x180';
               break;
@@ -330,6 +333,10 @@ window.serviceSaveSettings = () => {
   let width;
   let height;
   switch (document.getElementById('selectSettingsResolution').value) {
+    case '384x216':
+      width = 384;
+      height = 216;
+      break;
     case '320x180':
       width = 320;
       height = 180;
