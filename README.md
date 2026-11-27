@@ -111,7 +111,9 @@ Version tracker is available in [hyperion-webos#16](https://github.com/webosbrew
 ### Credits
 This project would never ever exist without help from [@Mariotaku](https://github.com/mariotaku) and [@Informatic](https://github.com/Informatic).
 Both programmed important things at the beginning of this whole ambilight project. [@tuxuser](https://github.com/tuxuser) also made some important changes in the mid of this project.  
-Share them some love if you can, they taught and showed me alot!  
+Share them some love if you can, they taught and showed me alot!
+
+Special thanks also to [@matze19999](https://github.com/matze19999/HyperDRM) for pioneering LG's `vtCapture_*Histogram` approach for DRM ambient lighting on webOS, which inspired the `libhistogram` fallback backend.  
 
 You should also check out the other contributors. Some nice enhancements wouldn't be there without them :)  
   
