@@ -109,6 +109,8 @@ Please see [hyperion-webos#known-issues](https://github.com/webosbrew/hyperion-w
 Version tracker is available in [hyperion-webos#16](https://github.com/webosbrew/hyperion-webos/issues/16). 
 
 ### Credits
+
+Originally created and developed by [@TBSniller](https://github.com).
 This project would never ever exist without help from [@Mariotaku](https://github.com/mariotaku) and [@Informatic](https://github.com/Informatic).
 Both programmed important things at the beginning of this whole ambilight project. [@tuxuser](https://github.com/tuxuser) also made some important changes in the mid of this project.  
 Share them some love if you can, they taught and showed me alot!
