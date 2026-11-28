@@ -119,6 +119,8 @@ Share them some love if you can, they taught and showed me alot!
 
 Special thanks also to [@matze19999](https://github.com/matze19999/HyperDRM) for pioneering LG's `vtCapture_*Histogram` approach for DRM ambient lighting on webOS, which inspired the `libhistogram` fallback backend.  
 
+Special thanks to **jb68** for extensive testing, detailed logs, and feedback on LG OLED C2 (webOS 25) during the development of the DRM/HDMI histogram fallback.
+
 You should also check out the other contributors. Some nice enhancements wouldn't be there without them :)  
   
 Check out [OpenLGs-Discord](https://discord.gg/9sqAgHVRhP) server, if you have some questions. You will find a very helpful community. <3  
